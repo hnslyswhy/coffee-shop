@@ -1,0 +1,178 @@
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+  color: #393939;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* header section */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #fff0ed;
+  width: 100%;
+}
+
+.logo {
+  min-width: 3.125rem;
+  max-width: 7.5rem;
+  margin: 1.25rem;
+}
+
+.heading {
+  font-size: 3.75rem;
+  font-weight: 300;
+}
+
+.nav__list {
+  display: flex;
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.nav__link {
+  font-size: 1.31rem;
+  font-weight: 400;
+  margin: 1.25rem;
+}
+
+li:nth-of-type(3) > .nav__link {
+  color: #5bacc3;
+}
+
+/* hero section */
+.hero {
+  display: flex;
+  justify-content: center;
+  background-color: #fff0ed;
+  width: 100%;
+}
+
+.hero__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.25rem;
+  width: 60%;
+  margin-left: 10%;
+}
+
+.hero__description {
+  width: 45%;
+  margin: 1.25rem;
+  margin-left: 0rem;
+}
+
+.button {
+  background-color: #5bacc3;
+  min-width: 11.25rem;
+  max-width: 80%;
+  padding: 1.25rem 2.5rem;
+  margin: 1.25rem 0rem;
+  color: white;
+  font-size: 1.31rem;
+  font-weight: 400;
+  border: #5bacc3;
+  text-align: center;
+}
+
+.hero__description + .button {
+  max-width: 15rem;
+}
+
+.hero__image {
+  width: 40%;
+  margin: 1.25rem auto;
+  padding: 1.25rem;
+}
+
+/*product section*/
+.products-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 1.25rem;
+}
+
+.products-container .heading {
+  margin: 1.25rem;
+}
+
+.products__gallary {
+  display: flex;
+}
+
+.product__card {
+  margin: 2.5rem;
+  padding: 1.25rem;
+  width: 30%;
+  min-width: 20.625rem;
+  max-width: 21.875rem;
+  min-height: 27.5rem;
+  max-height: 28.75rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 9px -1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+
+.product__image {
+  min-height: 15rem;
+  max-height: 34.375rem;
+}
+
+.subheadline {
+  font-size: 2.06rem;
+  font-weight: 300;
+}
+
+.product__price {
+  color: #5bacc3;
+  font-size: 2.06rem;
+  font-weight: 400;
+}
+
+/*discount section */
+.discount {
+  padding: 12.5rem 2.5rem;
+}
+
+.discount__description {
+  max-width: 90%;
+  background-color: #393939;
+  color: white;
+  font-size: 2.813rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0rem auto;
+  padding: 2.5rem 0rem;
+}
+
+/*footer section*/
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  background-color: #fff0ed;
+  width: 100%;
+}
+
+.footer__item {
+  margin: 1.25rem 5rem;
+}
+
+.footer__item .logo {
+  margin: 0rem;
+}
+
+.footer__date {
+  font-weight: bold;
+}

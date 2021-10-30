@@ -1,0 +1,134 @@
+* {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+  color: #393939;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* header section */
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fff0ed;
+  padding: 0.615rem;
+}
+
+.nav__logo {
+  min-width: 3.125rem;
+  max-width: 7.5rem;
+  margin: 1.25rem;
+}
+
+.heading {
+  font-size: 3.75rem;
+  font-weight: 300;
+}
+
+.nav__list {
+  display: flex;
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.nav__link {
+  font-size: 1.313rem;
+  font-weight: 400;
+  margin: 1.25rem;
+}
+
+li:nth-of-type(3) > .nav__link {
+  color: #5bacc3;
+}
+
+/* hero section */
+.hero-background {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 35.938rem;
+  max-height: 37.5rem;
+  background-image: url(../assets/images/coffee-circle.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.hero-background > .heading {
+  min-width: 17.5rem;
+  max-width: 18.75rem;
+  min-height: 11.25rem;
+  max-height: 12.5rem;
+  background-color: #393939;
+  color: white;
+  text-align: center;
+  margin: 0rem auto;
+}
+
+.hero__menu {
+  width: 100%;
+  background-color: #393939;
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.hero__link {
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  border-left: #5bacc3 5px solid;
+  padding: 0rem 1.25rem;
+  font-size: 1.313rem;
+  font-weight: 400;
+}
+
+/* products section */
+.products_container {
+  background-color: #fff0ed;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.products_container:nth-of-type(3) {
+  background-color: #f7f7f7;
+}
+
+.product__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.625rem;
+  width: 100%;
+}
+
+.sub__heading {
+  font-size: 2.063rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.product__intro,
+.product__price {
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.product__price {
+  color: #5bacc3;
+}
+
+.product__intro {
+  width: 35%;
+  text-align: center;
+  margin: 0.615rem;
+}
