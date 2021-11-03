@@ -1,29 +1,19 @@
 @use "./partial/global";
 
 * {
-  margin: 0rem;
-  padding: 0rem;
-  box-sizing: border-box;
-  color: #393939;
-  text-decoration: none;
-  list-style: none;
-  font-family: "Open Sans";
-  font-weight: 400;
+  color: global.$neutral-black;
 }
 
 /* header section */
 .navbar {
-  display: flex;
-  align-items: center;
-  background-color: #fff0ed;
+  background-color: global.$primary-pink;
   width: 100%;
   padding: 0.615rem;
-  display: flex;
-  justify-content: space-between;
+  @include global.flexbox(row, space-between, center);
 }
 
 .nav__brand {
-  display: flex;
+  @include global.flexbox;
 }
 
 .logo {
@@ -33,40 +23,34 @@
 }
 
 .heading {
-  font-size: 3.75rem;
-  font-weight: 300;
+  @include global.h1;
 }
 
 .nav__list {
-  display: flex;
+  @include global.flexbox;
   padding: 1.25rem;
   margin-top: 1.25rem;
 }
 
 .nav__link {
-  font-size: 1.31rem;
-  font-weight: 400;
+  @include global.text-button;
   margin: 1.25rem;
 }
 
 li:nth-of-type(3) > .nav__link {
-  color: #5bacc3;
+  color: global.$primary-blue;
 }
 
 /* hero section */
 .hero {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #fff0ed;
+  @include global.flexbox(row, space-around, center);
+  background-color: global.$primary-pink;
   padding: 2.5rem;
 }
 
 .hero__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include global.flexbox(column, center, stretch);
 }
 
 .hero__description {
@@ -76,7 +60,7 @@ li:nth-of-type(3) > .nav__link {
 }
 
 .button__border {
-  border: 2px solid #393939;
+  border: 2px solid global.$neutral-black;
   width: 15rem;
   height: 4.5rem;
   position: relative;
@@ -85,11 +69,10 @@ li:nth-of-type(3) > .nav__link {
 
 .button {
   width: 15rem;
-  background-color: #5bacc3;
+  background-color: global.$primary-blue;
   padding: 1.25rem 2.5rem;
-  color: white;
-  font-size: 1.31rem;
-  font-weight: 400;
+  color: global.$neutral-white;
+  @include global.text-button;
   text-align: center;
   position: relative;
   bottom: 4rem;
@@ -104,12 +87,10 @@ li:nth-of-type(3) > .nav__link {
 
 /*product section*/
 .products-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f7f7f7;
+  @include global.flexbox(column, center, center);
+  background-color: global.$neutral-lightGray;
   padding: 1.25rem;
+  overflow: hidden;
 }
 
 .products-container .heading {
@@ -117,9 +98,8 @@ li:nth-of-type(3) > .nav__link {
 }
 
 .products__gallary {
-  display: flex;
+  @include global.flexbox(row, space-between, stretch);
   width: 80%;
-  justify-content: space-between;
 }
 
 .product__card {
@@ -131,26 +111,21 @@ li:nth-of-type(3) > .nav__link {
   max-height: 28.75rem;
   border-radius: 10px;
   box-shadow: 0 5px 9px -1px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background-color: white;
+  @include global.flexbox(column, space-around, center);
+  background-color: global.$neutral-white;
 }
 
 .product__description {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #fff0ed;
+  @include global.flexbox(row, space-around, center);
+  background-color: global.$primary-pink;
   border-radius: 10px;
 }
 
 .product__count {
-  color: #909090;
-  font-size: 1.125rem;
+  color: global.$neutral-gray;
+  @include global.text-regular;
 }
 
 .product__image {
@@ -160,29 +135,24 @@ li:nth-of-type(3) > .nav__link {
 }
 
 .subheadline {
-  font-size: 2.06rem;
-  font-weight: 300;
+  @include global.h3;
 }
 
 .product__price {
-  color: #5bacc3;
-  font-size: 2.06rem;
-  font-weight: 400;
+  color: global.$primary-blue;
+  @include global.h3;
 }
 
 /*discount section */
 .discount {
   padding: 5rem 2.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: space-around;
-  justify-content: center;
+  @include global.flexbox(column, center, space-around);
   width: 100%;
 }
 
 .discount__difference {
-  display: flex;
-  justify-content: space-around;
+  @include global.flexbox(row, space-around, stretch);
+  width: 100%;
 }
 .discount__difference-description {
   width: 30%;
@@ -193,8 +163,7 @@ li:nth-of-type(3) > .nav__link {
 }
 
 .discount__difference-logos {
-  display: flex;
-  justify-content: space-between;
+  @include global.flexbox(row, space-between, stretch);
 }
 
 .discount__difference-logos .logo {
@@ -204,9 +173,8 @@ li:nth-of-type(3) > .nav__link {
 .discount__coldbrew {
   min-width: 25rem;
   max-width: 31.25rem;
-  display: flex;
-  justify-content: flex-end;
-  border: solid 5px #5bacc3;
+  @include global.flexbox(row, flex-end, stretch);
+  border: solid 5px global.$primary-blue;
   box-sizing: content-box;
 }
 
@@ -216,9 +184,7 @@ li:nth-of-type(3) > .nav__link {
   background-size: cover;
   min-width: 25rem;
   max-width: 31.25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include global.flexbox(row, center, center);
   padding: 2.5rem;
   position: relative;
   z-index: -1;
@@ -229,19 +195,17 @@ li:nth-of-type(3) > .nav__link {
 .discount__description {
   width: 80%;
   text-align: center;
-  background-color: #393939;
-  color: white;
-  font-size: 2.813rem;
-  font-weight: 400;
+  background-color: global.$neutral-black;
+  color: global.$neutral-white;
+  @include global.text-attention;
   margin: 10rem auto;
   padding: 2.5rem 7.5rem;
 }
 
 /*footer section*/
 .footer {
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff0ed;
+  @include global.flexbox(row, space-between, stretch);
+  background-color: global.$primary-pink;
   padding: 2.5rem;
   width: 100%;
   height: 10%;
