@@ -7,20 +7,21 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/global.css" class="css" />
-    <link rel="stylesheet" href="./css/landing.css" class="css" />
+    <link rel="stylesheet" href="./scss/landing.css" class="css" />
     <title>Coffee Shop - Home</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <a href="/index.html"
-          ><img
-            src="./assets/images/coffee-beans-logo-and-footer.svg"
-            alt="coffee-bean-icon"
-            class="logo"
-        /></a>
-        <h2 class="heading">nitro</h2>
+        <div class="nav__brand">
+          <a href="/index.html"
+            ><img
+              src="./assets/images/coffee-beans-logo-and-footer.svg"
+              alt="coffee-bean-icon"
+              class="logo"
+          /></a>
+          <h2 class="heading">nitro</h2>
+        </div>
         <ul class="nav__list">
           <li>
             <a href="/index.html" class="nav__link">ABOUT</a>
@@ -42,7 +43,9 @@
             Coffee is a brewed drink prepared from roasted coffee beans. The
             seeds of berries from certain Coffee species.
           </p>
-          <a class="button" href="/pages/menu.html">SHOP NOW</a>
+          <div class="button__border">
+            <a class="button" href="/pages/menu.html">SHOP NOW</a>
+          </div>
         </div>
         <div class="hero__image">
           <img src="./assets/images/coffeebeans-hero.png" alt="coffee bag" />
@@ -97,15 +100,53 @@
             </div>
           </article>
         </div>
-        <a class="button" href="/pages/menu.html">VIEW ALL</a>
+        <div class="button__border">
+          <a class="button" href="/pages/menu.html">VIEW ALL</a>
+        </div>
       </section>
       <section class="discount">
+        <div class="discount__difference">
+          <div class="discount__difference-description">
+            <h2 class="heading">We're Different</h2>
+            <p class="discount__difference-content">
+              We grow and roast our own beans. Every bean, every cup, every step
+              of the way, we strive for excellence.
+            </p>
+            <div class="discount__difference-logos">
+              <img class="logo" src="assets/images/planting.svg" alt="plants" />
+              <img
+                class="logo"
+                src="assets/images/coffee-beans.svg"
+                alt="coffee-beans"
+              />
+              <img
+                class="logo"
+                src="assets/images/coffee-cup.svg"
+                alt="coffee-cup"
+              />
+            </div>
+            <div class="button__border">
+              <a class="button" href="/pages/menu.html">LEARN MORE</a>
+            </div>
+          </div>
+
+          <div class="discount__coldbrew">
+            <div class="discount__coldbrew-background">
+              <img src="assets/images/tiltedcan.png" alt="" />
+            </div>
+          </div>
+        </div>
         <p class="discount__description">
           Get 20% off your first order with code: FirstNitro
         </p>
       </section>
     </main>
     <footer class="footer">
+      <img
+        class="footer__logo footer__logo1"
+        src="./assets/images/coffee-beans-logo-and-footer.svg"
+        alt="coffee-beans"
+      />
       <div class="footer__item">
         <h3 class="subheadline">Address</h3>
         <p>503 Broadway Penthouse</p>
@@ -140,6 +181,11 @@
             alt="Instagram"
         /></a>
       </div>
+      <img
+        class="footer__logo footer__logo2"
+        src="./assets/images/coffee-beans-logo-and-footer.svg"
+        alt="coffee-beans"
+      />
     </footer>
   </body>
 </html>

@@ -7,20 +7,21 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/global.css" class="css" />
-    <link rel="stylesheet" href="../css/menu.css" class="css" />
+    <link rel="stylesheet" href="../scss/menu.css" class="css" />
     <title>Coffee Shop - Menu</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <a href="/index.html"
-          ><img
-            src="../assets/images/coffee-beans-logo-and-footer.svg"
-            alt="coffe-bean-icon"
-            class="nav__logo"
-        /></a>
-        <h2 class="heading">nitro</h2>
+        <div class="nav__brand">
+          <a href="/index.html"
+            ><img
+              src="../assets/images/coffee-beans-logo-and-footer.svg"
+              alt="coffe-bean-icon"
+              class="nav__logo"
+          /></a>
+          <h2 class="heading">nitro</h2>
+        </div>
         <ul class="nav__list">
           <li>
             <a href="/index.html" class="nav__link">ABOUT</a>
@@ -36,8 +37,10 @@
     </header>
     <main>
       <section>
-        <div class="hero-background">
-          <h1 class="heading">MENU</h1>
+        <div class="hero">
+          <div class="hero__heading-container">
+            <h1 class="heading">MENU</h1>
+          </div>
         </div>
         <ul class="hero__menu">
           <li>
