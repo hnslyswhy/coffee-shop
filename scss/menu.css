@@ -99,6 +99,10 @@ li:nth-of-type(3) > .nav__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -109,7 +113,7 @@ li:nth-of-type(3) > .nav__link {
   z-index: 2;
 }
 
-.hero__heading-container > .heading {
+.hero__heading-container + .heading {
   color: white;
   min-width: 17.5rem;
   max-width: 18.75rem;
@@ -125,9 +129,9 @@ li:nth-of-type(3) > .nav__link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  top: 0.625rem;
-  left: 0.625rem;
+  position: relative;
+  bottom: 10rem;
+  left: 1.25rem;
   z-index: 1;
 }
 

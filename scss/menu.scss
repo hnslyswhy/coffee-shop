@@ -75,13 +75,14 @@ li:nth-of-type(3) > .nav__link {
   box-sizing: content-box;
   border: solid 5px #5bacc3;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 2;
 }
 
-.hero__heading-container > .heading {
+.hero__heading-container + .heading {
   color: white;
   min-width: 17.5rem;
   max-width: 18.75rem;
@@ -91,9 +92,9 @@ li:nth-of-type(3) > .nav__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0.625rem;
-  left: 0.625rem;
+  position: relative;
+  bottom: 10rem;
+  left: 1.25rem;
   z-index: 1;
 }
 
