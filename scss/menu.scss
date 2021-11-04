@@ -1,48 +1,46 @@
 @use "./partial/global";
 
+.heading {
+  @include global.h1;
+}
 /* header section */
 .header {
   background-color: global.$primary-pink;
   width: 100%;
   padding: 0.615rem;
   @include global.flexbox(row, space-between, center);
-}
 
-.header__brand {
-  @include global.flexbox;
-}
+  &__brand {
+    @include global.flexbox;
+  }
 
-.header__logo {
-  min-width: 3.125rem;
-  max-width: 7.5rem;
-  margin: 1.25rem;
-}
-
-.heading {
-  @include global.h1;
+  &__logo {
+    min-width: 3.125rem;
+    max-width: 7.5rem;
+    margin: 1.25rem;
+  }
 }
 
 /******** nav  *******/
-.nav__list {
+.nav {
   @include global.flexbox;
   padding: 1.25rem;
   margin-top: 1.25rem;
-}
 
-.nav__link {
-  @include global.text-button;
-  margin: 1.25rem;
-  color: global.$neutral-black;
-}
+  &__link {
+    @include global.text-button;
+    margin: 1.25rem;
+    color: global.$neutral-black;
+  }
 
-li:nth-of-type(3) > .nav__link {
-  color: global.$primary-blue;
+  li:nth-of-type(3) > .nav__link {
+    color: global.$primary-blue;
+  }
 }
 
 /* hero section */
 .hero {
-  min-width: 100%;
-  max-width: 100%;
+  width: 100%;
   min-height: 35.938rem;
   max-height: 37.5rem;
   background-image: url(../assets/images/coffee-circle.jpg);
@@ -51,84 +49,78 @@ li:nth-of-type(3) > .nav__link {
   background-size: cover;
   overflow: hidden;
   @include global.flexbox(column, center, center);
+
+  &__heading-container {
+    min-width: 17.5rem;
+    max-width: 18.75rem;
+    min-height: 11.25rem;
+    max-height: 12.5rem;
+    box-sizing: content-box;
+    border: solid 5px global.$primary-blue;
+    @include global.flexbox(column, center, center);
+    position: relative;
+    z-index: 2;
+  }
+
+  &__heading-container + .heading {
+    color: global.$neutral-white;
+    min-width: 17.5rem;
+    max-width: 18.75rem;
+    min-height: 11.25rem;
+    max-height: 12.5rem;
+    background-color: global.$neutral-black;
+    @include global.flexbox(row, center, center);
+    position: relative;
+    bottom: 10rem;
+    left: 1.25rem;
+    z-index: 1;
+  }
+
+  &__menu {
+    width: 100%;
+    background-color: global.$neutral-black;
+    @include global.flexbox(row, center, stretch);
+    padding: 1.25rem;
+  }
+  &__link {
+    color: global.$neutral-white;
+    text-transform: uppercase;
+    @include global.flexbox(row, center, stretch);
+    border-left: global.$primary-blue 5px solid;
+    padding: 0rem 1.25rem;
+    @include global.text-button;
+  }
 }
 
-.hero__heading-container {
-  min-width: 17.5rem;
-  max-width: 18.75rem;
-  min-height: 11.25rem;
-  max-height: 12.5rem;
-  box-sizing: content-box;
-  border: solid 5px global.$primary-blue;
-  @include global.flexbox(column, center, center);
-  position: relative;
-  z-index: 2;
-}
-
-.hero__heading-container + .heading {
-  color: global.$neutral-white;
-  min-width: 17.5rem;
-  max-width: 18.75rem;
-  min-height: 11.25rem;
-  max-height: 12.5rem;
-  background-color: global.$neutral-black;
-  @include global.flexbox(row, center, center);
-  position: relative;
-  bottom: 10rem;
-  left: 1.25rem;
-  z-index: 1;
-}
-
-.hero__menu {
-  width: 100%;
-  background-color: global.$neutral-black;
-  @include global.flexbox(row, center, stretch);
-  padding: 1.25rem;
-}
-
-.hero__link {
-  color: global.$neutral-white;
-  text-transform: uppercase;
-  @include global.flexbox(row, center, stretch);
-  border-left: global.$primary-blue 5px solid;
-  padding: 0rem 1.25rem;
-  @include global.text-button;
-}
-
-/* products section */
-.products_container {
+/* product section */
+.product {
   background-color: global.$primary-pink;
   width: 100%;
   padding: 2rem;
   @include global.flexbox(column, center, center);
-}
 
-.products_container:nth-of-type(3) {
-  background-color: global.$neutral-lightGray;
-}
-
-.product__card {
-  @include global.flexbox(column, center, center);
-  margin: 0.625rem;
-  width: 100%;
-}
-
-.sub__heading {
-  @include global.h3;
-  text-align: center;
-}
-
-.product__intro,
-.product__price {
-  @include global.text-italic;
-}
-
-.product__price {
-  color: global.$primary-blue;
-}
-
-.product__intro {
-  width: 35%;
-  text-align: center;
-  margin: 0.615rem;
+  &:nth-of-type(3) {
+    background-color: global.$neutral-lightGray;
+  }
+  &__card {
+    @include global.flexbox(column, center, center);
+    margin: 0.625rem;
+    width: 100%;
+  }
+  .sub__heading {
+    @include global.h3;
+    text-align: center;
+  }
+  &__intro,
+  &__price {
+    @include global.text-italic;
+  }
+  &__price {
+    color: global.$primary-blue;
+  }
+  & .product__intro {
+    width: 35%;
+    text-align: center;
+    margin: 0.615rem;
+  }
 }
