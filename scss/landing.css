@@ -87,9 +87,14 @@ li:nth-of-type(3) > .nav__link {
 .button__border {
   border: 2px solid #393939;
   width: 15rem;
-  height: 4.5rem;
+  height: 4.3rem;
   position: relative;
   z-index: 2;
+}
+
+.button__border:active {
+  top: 0.4rem;
+  left: 0.613rem;
 }
 
 .button {
@@ -221,32 +226,52 @@ li:nth-of-type(3) > .nav__link {
   width: 3.125rem;
 }
 
+.discount__coldbrew-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
 .discount__coldbrew {
-  min-width: 25rem;
-  max-width: 31.25rem;
+  width: 27.5rem;
+  height: 27.5rem;
+  border: solid 5px #5bacc3;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: stretch;
-  border: solid 5px #5bacc3;
-  box-sizing: content-box;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 1.25rem;
+  bottom: 1.25rem;
 }
 
 .discount__coldbrew-background {
   background-image: url("../assets/images/coldbrewbackground.png");
   background-position: center;
   background-size: cover;
-  min-width: 25rem;
-  max-width: 31.25rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 2.5rem;
-  position: relative;
+  width: 27.5rem;
+  height: 27.5rem;
+  position: absolute;
   z-index: -1;
-  top: 1.25rem;
-  left: 1.25rem;
+}
+
+.discount__coldbrew-image {
+  position: relative;
+  z-index: 2;
+}
+
+.discount__coldbrew-image:hover {
+  cursor: pointer;
+  -webkit-animation-name: rotating;
+          animation-name: rotating;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .discount__description {
@@ -258,6 +283,14 @@ li:nth-of-type(3) > .nav__link {
   font-weight: 400;
   margin: 10rem auto;
   padding: 2.5rem 7.5rem;
+  -webkit-animation-name: flash;
+          animation-name: flash;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 /*footer section*/
@@ -296,4 +329,38 @@ li:nth-of-type(3) > .nav__link {
   position: relative;
   top: 2.5rem;
   left: 3.75rem;
+}
+
+@-webkit-keyframes rotating {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes rotating {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@-webkit-keyframes flash {
+  0% {
+    background-color: #393939;
+  }
+  50% {
+    background-color: #909090;
+  }
+  100% {
+    background-color: #5bacc3;
+  }
+}
+@keyframes flash {
+  0% {
+    background-color: #393939;
+  }
+  50% {
+    background-color: #909090;
+  }
+  100% {
+    background-color: #5bacc3;
+  }
 }/*# sourceMappingURL=landing.css.map */
