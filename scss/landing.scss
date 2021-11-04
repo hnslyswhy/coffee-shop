@@ -1,18 +1,14 @@
 @use "./partial/global";
 
-* {
-  color: global.$neutral-black;
-}
-
 /* header section */
-.navbar {
+.header {
   background-color: global.$primary-pink;
   width: 100%;
   padding: 0.615rem;
   @include global.flexbox(row, space-between, center);
 }
 
-.nav__brand {
+.header__brand {
   @include global.flexbox;
 }
 
@@ -26,6 +22,7 @@
   @include global.h1;
 }
 
+/******** nav  *******/
 .nav__list {
   @include global.flexbox;
   padding: 1.25rem;
@@ -35,6 +32,7 @@
 .nav__link {
   @include global.text-button;
   margin: 1.25rem;
+  color: global.$neutral-black;
 }
 
 li:nth-of-type(3) > .nav__link {
@@ -150,7 +148,7 @@ li:nth-of-type(3) > .nav__link {
 
 /*discount section */
 .discount {
-  padding: 5rem 2.5rem;
+  padding: 7.5rem 2.5rem;
   @include global.flexbox(column, center, space-around);
   width: 100%;
 }
